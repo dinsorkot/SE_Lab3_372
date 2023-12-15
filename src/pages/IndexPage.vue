@@ -18,7 +18,7 @@
         filled
         v-model="name"
         label="You name *"
-        hint="name and lastname"
+        hint="name and last name"
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'please enter name and last name']"
       />
