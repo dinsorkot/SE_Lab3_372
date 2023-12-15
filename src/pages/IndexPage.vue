@@ -14,16 +14,24 @@
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'โปรดระบุ']"
       />
+      <q-input
+        filled
+        v-model="name"
+        label="You name *"
+        hint="name and lastname"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'please enter name and last name']"
+      />
 
       <q-input
         filled
         type="อายุ"
         v-model="age"
-        label="ใส่อายุ *"
+        label="Your age *"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
-          val => val > 0 && val < 100 || 'Please type a real age'
+          val => val !== null && val !== '' || '請輸入您的年齡',
+          val => val > 0 && val < 100 || '請輸入真實年齡'
         ]"
       />
 
